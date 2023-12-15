@@ -10,6 +10,6 @@ runs:
       run: dnf install -y gzip
       shell: bash
     - name: Get Zip
-      run: dnf install -y Zip
+      run: dnf install -y zip
       shell: bash
     
