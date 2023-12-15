@@ -1,0 +1,11 @@
+name: 'Prepare AWS Lambda Image '
+description: 'Install application needed by Github Actions to run properly inside AWS lambda images.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Get Tar
+      run: dnf install -y tar
+      shell: bash
+    - name: Get Gzip
+      run: dnf install -y gzip
+      shell: bash
