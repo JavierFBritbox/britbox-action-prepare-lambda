@@ -4,7 +4,7 @@ inputs:
   packager:
     description: 'Depending of the lambda version the packager is "dnf" or "apt"'
     required: false
-    default: 'apt'
+    default: 'yum'
 runs:
   using: 'composite'
   steps:
