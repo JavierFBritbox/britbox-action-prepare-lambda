@@ -5,6 +5,10 @@ inputs:
     description: 'Depending of the lambda version the packager is "dnf" or "apt"'
     required: false
     default: 'yum'
+  python-version:
+    description: 'Define the python version needed in the image to compile'
+    required: false
+    default: '3.6.0'
 runs:
   using: 'composite'
   steps:
@@ -17,4 +21,8 @@ runs:
     - name: Get Zip
       run: ${{ inputs.packager }} install -y zip
       shell: bash
+    - name: Get Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.6.0' 
     
