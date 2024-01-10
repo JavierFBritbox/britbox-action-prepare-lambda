@@ -26,7 +26,6 @@ runs:
       with:
         python-version: '3.11'
     - name: Check Python installed
-      run: python --version |
-          python3 --version
+      run: python --version
       shell: bash
     
